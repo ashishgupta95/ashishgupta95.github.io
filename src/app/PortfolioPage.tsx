@@ -1,4 +1,5 @@
-import { ArrowRight, ArrowUpRight, Download, Mail, MapPin } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Download, Mail } from "lucide-react";
+import EyeTrackingPortrait from "./EyeTrackingPortrait";
 
 const work = [
   { org: "Tricentis", area: "Test intelligence", title: "A shared view of nightly regression health", body: "Built a GitHub Actions reporting pipeline and GitHub Pages dashboard that turns large regression runs into useful failure reports for developers and testers.", metric: "1,396+ runs", note: "Daily triage platform adopted by 19 engineering teams.", tags: ["GitHub Actions", "TypeScript", "GitHub Pages"] },
@@ -42,13 +43,7 @@ export default function PortfolioPage() {
           <div className="hero-actions"><a className="button button-primary" href="#work">Explore selected work <ArrowRight size={17} aria-hidden="true" /></a><a className="button button-quiet" href="/AshishGupta_CV.pdf" download><Download size={16} aria-hidden="true" /> Download résumé</a></div>
           <div className="social-links"><a href="https://www.linkedin.com/in/ashish-gupta-6aa499117/" target="_blank" rel="noreferrer"><span className="social-mark">in</span> LinkedIn <ArrowUpRight size={13} aria-hidden="true" /></a><a href="https://github.com/ashishgupta95" target="_blank" rel="noreferrer"><span className="social-mark">GH</span> GitHub <ArrowUpRight size={13} aria-hidden="true" /></a></div>
         </div>
-        <aside className="profile-card" aria-label="Professional focus">
-          <div className="profile-top"><span>AT A GLANCE</span><span className="profile-monogram">AG</span></div>
-          <p className="profile-title">From difficult data to dependable products.</p>
-          <p className="profile-copy">I work at the intersection of backend systems, data quality, and the tools people use every day.</p>
-          <div className="focus-list"><div><span>01</span>Distributed systems</div><div><span>02</span>Data-intensive products</div><div><span>03</span>Enterprise AI workflows</div></div>
-          <p className="profile-location"><MapPin size={15} aria-hidden="true" /> Vienna, Austria <i>·</i> Europe &amp; India</p>
-        </aside>
+        <EyeTrackingPortrait />
       </section>
       <section className="proof-band" aria-label="Selected career impact"><div className="shell proof-grid">
         <div><strong>100+ <small>GB</small></strong><span>reconciled per data run</span></div><div><strong>19</strong><span>teams on a shared test dashboard</span></div><div><strong>25<small>%</small></strong><span>fewer validation errors</span></div><div><strong>9<small>+</small></strong><span>years in production engineering</span></div>
