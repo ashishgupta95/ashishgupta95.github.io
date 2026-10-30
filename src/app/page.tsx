@@ -4,8 +4,7 @@ import React, { useState, useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import RecruiterRoleMatch from "@/components/RecruiterRoleMatch";
-import McpSimulator from "@/components/McpSimulator";
-import ArchitectureVisualizer from "@/components/ArchitectureVisualizer";
+import SystemsLab from "@/components/SystemsLab";
 import CaseStudies from "@/components/CaseStudies";
 import ExperienceTimeline from "@/components/ExperienceTimeline";
 import SkillsRadar from "@/components/SkillsRadar";
@@ -44,26 +43,22 @@ export default function Home() {
         isTerminalOpen={isTerminalOpen}
       />
 
-      {/* Hero Section with Interactive Cyber Portrait */}
+      {/* Hero Section */}
       <Hero
-        onOpenMcpDemo={() => {
-          const el = document.getElementById("mcp-demo");
+        onOpenCaseStudies={() => {
+          const el = document.getElementById("case-studies");
           el?.scrollIntoView({ behavior: "smooth" });
         }}
-        onOpenTerminal={() => setIsTerminalOpen(true)}
       />
 
       {/* Recruiter Quick-Match & Role Explorer */}
       <RecruiterRoleMatch />
 
-      {/* Interactive Model Context Protocol (MCP) Simulator */}
-      <McpSimulator />
-
-      {/* Interactive Distributed Systems Architecture Visualizer */}
-      <ArchitectureVisualizer />
-
-      {/* Deep-Dive Case Studies */}
+      {/* Selected Case Studies */}
       <CaseStudies />
+
+      {/* Unified Interactive Systems Lab (MCP Simulator + Architecture Visualizer in one tabbed component) */}
+      <SystemsLab />
 
       {/* Career Experience & Accelerated Promotions */}
       <ExperienceTimeline />

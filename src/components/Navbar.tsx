@@ -92,17 +92,11 @@ export default function Navbar({
               Case Studies
             </a>
             <a
-              href="#mcp-demo"
+              href="#systems-lab"
               className="text-xs font-medium text-sky-400 hover:text-sky-300 px-3 py-1.5 rounded-full hover:bg-sky-500/10 transition-colors flex items-center gap-1.5"
             >
-              <Sparkles className="w-3 h-3 animate-pulse" />
-              Live MCP Lab
-            </a>
-            <a
-              href="#architecture"
-              className="text-xs font-medium text-neutral-300 hover:text-white px-3 py-1.5 rounded-full hover:bg-white/5 transition-colors"
-            >
-              Architecture
+              <Sparkles className="w-3 h-3" />
+              Systems Lab
             </a>
             <a
               href="#experience"
@@ -208,18 +202,11 @@ export default function Navbar({
               Case Studies
             </a>
             <a
-              href="#mcp-demo"
+              href="#systems-lab"
               onClick={() => setMobileMenuOpen(false)}
               className="px-3 py-2 rounded-lg text-sm text-sky-400 hover:bg-sky-500/10 flex items-center gap-2"
             >
-              <Sparkles className="w-4 h-4" /> Live MCP Lab
-            </a>
-            <a
-              href="#architecture"
-              onClick={() => setMobileMenuOpen(false)}
-              className="px-3 py-2 rounded-lg text-sm text-neutral-200 hover:bg-white/5"
-            >
-              Distributed Architecture
+              <Sparkles className="w-4 h-4" /> Systems Lab
             </a>
             <a
               href="#experience"

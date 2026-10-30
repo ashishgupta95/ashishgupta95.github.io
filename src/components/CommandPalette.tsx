@@ -74,14 +74,6 @@ export default function CommandPalette({
       },
     },
     {
-      label: "Jump to Live MCP Simulator",
-      icon: Sparkles,
-      category: "Navigation",
-      action: () => {
-        window.location.hash = "#mcp-demo";
-      },
-    },
-    {
       label: "View Featured Case Studies",
       icon: FileText,
       category: "Navigation",
@@ -90,11 +82,11 @@ export default function CommandPalette({
       },
     },
     {
-      label: "Inspect Distributed Architecture",
-      icon: Layers,
+      label: "Explore Interactive Systems Lab",
+      icon: Sparkles,
       category: "Navigation",
       action: () => {
-        window.location.hash = "#architecture";
+        window.location.hash = "#systems-lab";
       },
     },
     {
