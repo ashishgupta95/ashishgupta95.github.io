@@ -66,6 +66,14 @@ export default function CommandPalette({
 
   const actions = [
     {
+      label: "Recruiter Fit Assessment & Role Match",
+      icon: Briefcase,
+      category: "Navigation",
+      action: () => {
+        window.location.hash = "#recruiter-match";
+      },
+    },
+    {
       label: "Jump to Live MCP Simulator",
       icon: Sparkles,
       category: "Navigation",

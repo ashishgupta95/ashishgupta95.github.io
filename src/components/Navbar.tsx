@@ -79,6 +79,13 @@ export default function Navbar({
           {/* Desktop Navigation Links */}
           <nav className="hidden lg:flex items-center gap-1 rounded-full px-4 py-1.5 glass-panel border border-white/10">
             <a
+              href="#recruiter-match"
+              className="text-xs font-semibold text-emerald-400 hover:text-emerald-300 px-3 py-1.5 rounded-full hover:bg-emerald-500/10 transition-colors flex items-center gap-1.5"
+            >
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+              Role Match
+            </a>
+            <a
               href="#case-studies"
               className="text-xs font-medium text-neutral-300 hover:text-white px-3 py-1.5 rounded-full hover:bg-white/5 transition-colors"
             >
@@ -185,6 +192,14 @@ export default function Navbar({
       {mobileMenuOpen && (
         <div className="lg:hidden bg-[#0a0c14]/95 border-b border-white/10 px-4 pt-4 pb-6 mt-3 space-y-3">
           <div className="flex flex-col space-y-2">
+            <a
+              href="#recruiter-match"
+              onClick={() => setMobileMenuOpen(false)}
+              className="px-3 py-2 rounded-lg text-sm text-emerald-400 font-semibold hover:bg-emerald-500/10 flex items-center gap-2"
+            >
+              <span className="w-2 h-2 rounded-full bg-emerald-400"></span>
+              Role Match (Recruiter View)
+            </a>
             <a
               href="#case-studies"
               onClick={() => setMobileMenuOpen(false)}
