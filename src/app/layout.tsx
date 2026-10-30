@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import "./resume.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,9 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ashish Gupta — Senior Software Engineer | Distributed Systems & Enterprise MCPs",
+  title: "Ashish Gupta | Senior Software Engineer",
   description:
-    "Senior Software Engineer in Vienna, Austria. Specializing in high-throughput distributed architectures (.NET 8, C#, Rust, TypeScript), 100+ GB data reconciliation engines, and enterprise Model Context Protocols (MCPs).",
+    "Ashish Gupta is a Senior Software Engineer in Vienna with 9+ years of experience building data-intensive products, developer tools, and distributed systems.",
   keywords: [
     "Ashish Gupta",
     "Senior Software Engineer",
@@ -35,8 +36,8 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Ashish Gupta — Senior Software Engineer",
     description:
-      "Architecting high-throughput distributed systems, low-latency engines, and enterprise AI & Model Context Protocols (MCPs).",
-    url: "https://github.com/ashishgupta95",
+      "Portfolio and résumé of Ashish Gupta, Senior Software Engineer in Vienna, Austria.",
+    url: "https://ashishgupta95.github.io/",
     siteName: "Ashish Gupta Portfolio",
     locale: "en_US",
     type: "website",
@@ -56,7 +57,7 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} dark antialiased scroll-smooth`}
     >
-      <body className="min-h-screen bg-[#06070a] text-neutral-100 selection:bg-sky-500/30 selection:text-sky-200">
+      <body className="site-body">
         {children}
       </body>
     </html>
