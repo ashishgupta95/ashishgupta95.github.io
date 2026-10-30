@@ -28,7 +28,7 @@ export default function Footer() {
   return (
     <footer className="relative border-t border-white/10 bg-[#040508] pt-16 pb-12 overflow-hidden">
       {/* Subtle bottom glow */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[200px] bg-sky-500/5 blur-[140px] pointer-events-none rounded-full" />
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[800px] h-[200px] bg-sky-500/5 blur-[140px] pointer-events-none rounded-full" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
@@ -158,7 +158,8 @@ export default function Footer() {
           <div className="flex items-center gap-4">
             <span className="flex items-center gap-1.5 text-emerald-400">
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-              Available for technical consulting & high-impact engineering
+              <span className="hidden sm:inline">Available for consulting & engineering</span>
+              <span className="sm:hidden">Open to opportunities</span>
             </span>
             <button
               onClick={scrollToTop}

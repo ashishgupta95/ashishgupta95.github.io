@@ -6,7 +6,7 @@ import { Briefcase, Award, GraduationCap, Calendar, MapPin, Sparkles, CheckCircl
 
 export default function ExperienceTimeline() {
   return (
-    <section id="experience" className="py-24 relative bg-[#06070a]">
+    <section id="experience" className="py-24 relative bg-[#06070a] overflow-hidden">
       {/* Background radial gradient */}
       <div className="absolute top-1/3 left-1/3 w-[600px] h-[350px] bg-sky-500/10 blur-[150px] pointer-events-none rounded-full" />
 

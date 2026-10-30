@@ -23,7 +23,7 @@ export default function CaseStudies() {
   };
 
   return (
-    <section id="case-studies" className="py-24 relative bg-[#06070a]">
+    <section id="case-studies" className="py-24 relative bg-[#06070a] overflow-hidden">
       {/* Background illumination */}
       <div className="absolute top-1/4 right-1/4 w-[500px] h-[350px] bg-purple-500/10 blur-[150px] pointer-events-none rounded-full" />
       <div className="absolute bottom-1/4 left-1/4 w-[500px] h-[350px] bg-sky-500/10 blur-[150px] pointer-events-none rounded-full" />

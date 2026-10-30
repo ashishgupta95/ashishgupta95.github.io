@@ -27,7 +27,7 @@ export default function SkillsRadar() {
   }).filter(Boolean);
 
   return (
-    <section id="skills" className="py-24 relative bg-[#06070a]">
+    <section id="skills" className="py-24 relative bg-[#06070a] overflow-hidden">
       {/* Background glow */}
       <div className="absolute top-1/2 right-1/3 w-[500px] h-[300px] bg-cyan-500/10 blur-[150px] pointer-events-none rounded-full" />
 
