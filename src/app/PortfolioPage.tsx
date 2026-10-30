@@ -28,7 +28,7 @@ export default function PortfolioPage() {
   return <main id="top" className="portfolio">
     <a className="skip-link" href="#main-content">Skip to content</a>
     <header className="site-header"><div className="shell header-inner">
-      <a className="brand" href="#top" aria-label="Ashish Gupta, home"><span className="brand-mark">AG</span><span><strong>Ashish Gupta</strong><small>Senior Software Engineer</small></span></a>
+      <a className="brand" href="#top" aria-label="Ashish Gupta, home"><span className="brand-mark">AG</span><span className="brand-copy"><strong>Ashish Gupta</strong><small>Senior Software Engineer</small></span></a>
       <nav className="primary-nav" aria-label="Main navigation"><a href="#work">Selected work</a><a href="#experience">Experience</a><a href="#expertise">Expertise</a></nav>
       <a className="header-link" href="/AshishGupta_CV.pdf" download>Résumé <ArrowUpRight size={16} aria-hidden="true" /></a>
     </div></header>
