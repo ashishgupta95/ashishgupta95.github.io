@@ -62,7 +62,7 @@ export default function CaseStudies() {
                 {/* Header Row */}
                 <div
                   onClick={() => toggleExpand(study.id)}
-                  className="p-6 sm:p-8 cursor-pointer flex flex-col md:flex-row md:items-center justify-between gap-6"
+                  className="p-4 sm:p-8 cursor-pointer flex flex-col md:flex-row md:items-center justify-between gap-4 sm:gap-6"
                 >
                   <div className="space-y-2 max-w-3xl">
                     <div className="flex flex-wrap items-center gap-2.5">
@@ -74,7 +74,7 @@ export default function CaseStudies() {
                       </span>
                     </div>
 
-                    <h3 className="text-xl sm:text-2xl font-bold text-white group-hover:text-sky-300 transition-colors">
+                    <h3 className="text-lg sm:text-2xl font-bold text-white group-hover:text-sky-300 transition-colors">
                       {study.title}
                     </h3>
 
@@ -84,17 +84,17 @@ export default function CaseStudies() {
                   </div>
 
                   {/* Metrics Badges & Expand Arrow */}
-                  <div className="flex items-center gap-4 shrink-0 justify-between md:justify-end">
-                    <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-2 sm:gap-4 shrink-0 justify-between md:justify-end">
+                    <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
                       {study.metrics.map((metric, i) => (
                         <div
                           key={i}
-                          className="px-3 py-1.5 rounded-xl bg-neutral-900/90 border border-white/10 text-center"
+                          className="px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-lg sm:rounded-xl bg-neutral-900/90 border border-white/10 text-center"
                         >
-                          <div className="text-xs font-mono font-bold text-white">
+                          <div className="text-[11px] sm:text-xs font-mono font-bold text-white">
                             {metric.value}
                           </div>
-                          <div className="text-[10px] text-neutral-400">{metric.label}</div>
+                          <div className="text-[9px] sm:text-[10px] text-neutral-400">{metric.label}</div>
                         </div>
                       ))}
                     </div>

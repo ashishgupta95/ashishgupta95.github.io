@@ -87,7 +87,7 @@ export default function SkillsRadar() {
             return (
               <div
                 key={cat.name}
-                className="p-6 rounded-2xl glass-panel border border-white/10 hover:border-white/20 transition-all space-y-4"
+                className="p-4 sm:p-6 rounded-2xl glass-panel border border-white/10 hover:border-white/20 transition-all space-y-4"
               >
                 <h3 className="text-sm font-mono font-bold text-sky-400 tracking-wider uppercase border-b border-white/10 pb-3 flex items-center justify-between">
                   <span>{cat.name}</span>

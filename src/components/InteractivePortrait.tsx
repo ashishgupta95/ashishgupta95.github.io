@@ -55,7 +55,7 @@ export default function InteractivePortrait() {
       <div className="absolute -inset-1.5 bg-gradient-to-r from-sky-500/30 via-indigo-500/20 to-purple-500/30 rounded-3xl blur-xl opacity-75 group-hover:opacity-100 transition-opacity" />
 
       {/* Main Card Container */}
-      <div className="relative rounded-2xl bg-neutral-950/85 border border-white/10 backdrop-blur-xl p-5 shadow-2xl overflow-hidden max-w-[380px] mx-auto">
+      <div className="relative rounded-2xl bg-neutral-950/85 border border-white/10 backdrop-blur-xl p-4 sm:p-5 shadow-2xl overflow-hidden w-full max-w-[340px] sm:max-w-[380px] mx-auto">
         {/* Card Header Status Bar */}
         <div className="flex items-center justify-between gap-2 pb-3 mb-3 border-b border-white/10 text-[11px] font-mono">
           <div className="flex items-center gap-1.5 text-emerald-400">

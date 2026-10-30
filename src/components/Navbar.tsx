@@ -138,13 +138,13 @@ export default function Navbar({
               <span className="hidden md:inline text-[11px]">terminal</span>
             </button>
 
-            {/* Social Icons */}
+            {/* Social Icons (Hidden on mobile to preserve header breathing room; available in drawer and footer) */}
             <a
               href={PERSONAL_INFO.github}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub Profile"
-              className="p-2 rounded-lg bg-neutral-900/80 border border-neutral-800 text-neutral-400 hover:text-white hover:border-neutral-700 transition-colors"
+              className="hidden sm:inline-flex p-2 rounded-lg bg-neutral-900/80 border border-neutral-800 text-neutral-400 hover:text-white hover:border-neutral-700 transition-colors"
             >
               <GithubIcon className="w-4 h-4" />
             </a>
@@ -154,7 +154,7 @@ export default function Navbar({
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn Profile"
-              className="p-2 rounded-lg bg-neutral-900/80 border border-neutral-800 text-neutral-400 hover:text-sky-400 hover:border-neutral-700 transition-colors"
+              className="hidden sm:inline-flex p-2 rounded-lg bg-neutral-900/80 border border-neutral-800 text-neutral-400 hover:text-sky-400 hover:border-neutral-700 transition-colors"
             >
               <LinkedinIcon className="w-4 h-4" />
             </a>
@@ -228,11 +228,30 @@ export default function Navbar({
               href="/AshishGupta_CV.pdf"
               download="AshishGupta_Senior_Software_Engineer_CV.pdf"
               onClick={handleDownloadCV}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-sky-500 text-white font-medium text-xs shadow-md"
+              className="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-sky-500 text-white font-medium text-xs shadow-md"
             >
-              <Download className="w-4 h-4" /> Download CV (PDF)
+              <Download className="w-3.5 h-3.5" /> Download CV
             </a>
-            <span className="text-xs text-neutral-400 font-mono">Vienna, Austria</span>
+            <div className="flex items-center gap-2">
+              <a
+                href={PERSONAL_INFO.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 rounded-lg bg-neutral-900 border border-white/10 text-neutral-400 hover:text-white"
+                aria-label="GitHub"
+              >
+                <GithubIcon className="w-4 h-4" />
+              </a>
+              <a
+                href={PERSONAL_INFO.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 rounded-lg bg-neutral-900 border border-white/10 text-neutral-400 hover:text-sky-400"
+                aria-label="LinkedIn"
+              >
+                <LinkedinIcon className="w-4 h-4" />
+              </a>
+            </div>
           </div>
         </div>
       )}

@@ -37,7 +37,7 @@ export default function ExperienceTimeline() {
               </div>
 
               {/* Card Container */}
-              <div className="p-6 sm:p-8 rounded-2xl glass-panel group-hover:glass-panel-glow border border-white/10 group-hover:border-sky-500/30 transition-all duration-300">
+              <div className="p-4 sm:p-8 rounded-2xl glass-panel group-hover:glass-panel-glow border border-white/10 group-hover:border-sky-500/30 transition-all duration-300">
                 {/* Header Information */}
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 mb-4">
                   <div>

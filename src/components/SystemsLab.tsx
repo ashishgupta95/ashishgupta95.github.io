@@ -314,28 +314,32 @@ export default function SystemsLab() {
           </div>
 
           {/* Segmented Control Toggle */}
-          <div className="inline-flex p-1 rounded-xl bg-neutral-900 border border-white/10 self-start md:self-auto shadow-sm">
+          <div className="inline-flex w-full sm:w-auto p-1 rounded-xl bg-neutral-900 border border-white/10 self-start md:self-auto shadow-sm">
             <button
               onClick={() => setActiveTab("mcp")}
-              className={`flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-mono font-medium transition-all cursor-pointer ${
+              className={`flex-1 sm:flex-initial flex items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-2 rounded-lg text-xs font-mono font-medium transition-all cursor-pointer ${
                 activeTab === "mcp"
                   ? "bg-sky-500 text-white font-semibold shadow-md shadow-sky-500/20"
                   : "text-neutral-400 hover:text-white"
               }`}
             >
-              <Code2 className="w-3.5 h-3.5" />
-              <span>Model Context Protocol (MCP)</span>
+              <Code2 className="w-3.5 h-3.5 shrink-0" />
+              <span>
+                <span className="hidden sm:inline">Model Context Protocol </span>(MCP) Lab
+              </span>
             </button>
             <button
               onClick={() => setActiveTab("architecture")}
-              className={`flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-mono font-medium transition-all cursor-pointer ${
+              className={`flex-1 sm:flex-initial flex items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-2 rounded-lg text-xs font-mono font-medium transition-all cursor-pointer ${
                 activeTab === "architecture"
                   ? "bg-sky-500 text-white font-semibold shadow-md shadow-sky-500/20"
                   : "text-neutral-400 hover:text-white"
               }`}
             >
-              <Layers className="w-3.5 h-3.5" />
-              <span>Distributed System Topology</span>
+              <Layers className="w-3.5 h-3.5 shrink-0" />
+              <span>
+                <span className="hidden sm:inline">Distributed System </span>Topology
+              </span>
             </button>
           </div>
         </div>

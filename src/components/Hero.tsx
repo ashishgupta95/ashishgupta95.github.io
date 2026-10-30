@@ -83,7 +83,7 @@ export default function Hero({ onOpenCaseStudies }: HeroProps) {
             </div>
 
             {/* Clear, commanding headline */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.12]">
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.15]">
               Building reliable software for{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-300 via-indigo-200 to-sky-400">
                 high-throughput systems
@@ -92,20 +92,20 @@ export default function Hero({ onOpenCaseStudies }: HeroProps) {
             </h1>
 
             {/* Quiet, confident elevator pitch */}
-            <p className="text-base sm:text-lg text-neutral-300 leading-relaxed max-w-2xl font-normal">
+            <p className="text-sm sm:text-base lg:text-lg text-neutral-300 leading-relaxed max-w-2xl font-normal">
               I&apos;m <strong className="text-white font-semibold">Ashish Gupta</strong>. For 9+ years,
               I&apos;ve engineered mission-critical distributed platforms across enterprise cloud,
               nuclear energy safeguards, and supply chain logistics—specializing in{" "}
-              <span className="text-neutral-100 font-mono text-sm">.NET 8</span>,{" "}
-              <span className="text-neutral-100 font-mono text-sm">Rust</span>, and{" "}
-              <span className="text-neutral-100 font-mono text-sm">Model Context Protocols (MCPs)</span>.
+              <span className="text-neutral-100 font-mono text-xs sm:text-sm">.NET 8</span>,{" "}
+              <span className="text-neutral-100 font-mono text-xs sm:text-sm">Rust</span>, and{" "}
+              <span className="text-neutral-100 font-mono text-xs sm:text-sm">Model Context Protocols (MCPs)</span>.
             </p>
 
             {/* 2 Focused Actions + Clean Email Copy */}
-            <div className="flex flex-wrap items-center gap-3 pt-2">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
               <button
                 onClick={onOpenCaseStudies}
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white text-neutral-950 font-semibold text-xs sm:text-sm hover:bg-neutral-200 transition-all shadow-md shadow-white/10 cursor-pointer"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-white text-neutral-950 font-semibold text-xs sm:text-sm hover:bg-neutral-200 transition-all shadow-md shadow-white/10 cursor-pointer"
               >
                 <span>Explore Selected Work</span>
                 <ArrowRight className="w-4 h-4" />
@@ -114,7 +114,7 @@ export default function Hero({ onOpenCaseStudies }: HeroProps) {
               <a
                 href="/AshishGupta_CV.pdf"
                 download="AshishGupta_Senior_Software_Engineer_CV.pdf"
-                className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-neutral-900/90 border border-neutral-800 text-neutral-200 hover:text-white hover:border-neutral-700 font-medium text-xs sm:text-sm transition-all"
+                className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-neutral-900/90 border border-neutral-800 text-neutral-200 hover:text-white hover:border-neutral-700 font-medium text-xs sm:text-sm transition-all"
               >
                 <Download className="w-4 h-4 text-neutral-400" />
                 <span>Download CV</span>
@@ -122,7 +122,7 @@ export default function Hero({ onOpenCaseStudies }: HeroProps) {
 
               <button
                 onClick={handleCopyEmail}
-                className="inline-flex items-center gap-2 px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-neutral-300 hover:text-white hover:bg-white/10 text-xs sm:text-sm font-mono transition-all cursor-pointer"
+                className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-neutral-300 hover:text-white hover:bg-white/10 text-xs sm:text-sm font-mono transition-all cursor-pointer"
                 title="Copy email address"
               >
                 {copiedEmail ? (
