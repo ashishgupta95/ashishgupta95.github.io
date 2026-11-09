@@ -115,23 +115,23 @@ export default function ResumeSkills() {
       : SKILL_GROUPS.filter((g) => g.id === activeFilter);
 
   return (
-    <section id="skills" className="py-12 border-b-2 border-white/15 resume-border">
+    <section id="skills" className="py-12 border-b-2 border-[#121316] resume-border">
       {/* Newspaper Page 3 Header */}
-      <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8 pb-3 border-b border-white/10">
+      <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8 pb-3 border-b border-[#d6cebe]">
         <div>
-          <span className="text-[10px] font-mono text-[#ff6b6b] tracking-widest uppercase font-bold">
+          <span className="text-[10px] font-mono text-[#c92a2a] tracking-widest uppercase font-bold">
             PAGE 3 // TECHNOLOGY MARKET INDEX & SYSTEM DIRECTORY
           </span>
-          <h2 className="font-serif text-2xl sm:text-3xl font-black tracking-tight text-[#fdfbf7] mt-1">
+          <h2 className="font-serif text-2xl sm:text-3xl font-black tracking-tight text-[#121316] mt-1">
             The Technical Compendium & Toolchain Index
           </h2>
-          <p className="text-xs sm:text-sm text-[#dcd4c3] mt-1 font-serif italic">
+          <p className="text-xs sm:text-sm text-[#374151] mt-1 font-serif italic">
             An indexed taxonomy of systems languages, distributed message brokers, cloud infrastructure, and AI protocols.
           </p>
         </div>
 
-        <div className="text-xs font-mono text-[#a3b1cc] sm:text-right shrink-0">
-          <span className="px-2.5 py-1 rounded bg-[#0a1322] border border-white/10 inline-block font-bold">
+        <div className="text-xs font-mono text-[#52525b] sm:text-right shrink-0">
+          <span className="px-2.5 py-1 rounded bg-[#ede8dc] border border-[#d6cebe] inline-block font-bold text-[#121316]">
             6 DOMAINS • 40+ TOOLS
           </span>
         </div>
@@ -147,8 +147,8 @@ export default function ResumeSkills() {
               onClick={() => setActiveFilter(tab.id)}
               className={`px-3 py-1 text-xs font-mono tracking-wider rounded transition-all duration-150 ${
                 isActive
-                  ? "bg-[#ff6b6b] text-white font-bold shadow-sm shadow-[#ff6b6b]/30"
-                  : "bg-[#0a1322] text-[#a3b1cc] hover:text-[#fdfbf7] hover:bg-[#12213d] border border-white/10"
+                  ? "bg-[#c92a2a] text-white font-bold shadow-sm shadow-[#c92a2a]/30"
+                  : "bg-[#ede8dc] text-[#374151] hover:text-[#121316] hover:bg-[#e4ddce] border border-[#d6cebe]"
               }`}
             >
               {tab.label}
@@ -165,27 +165,27 @@ export default function ResumeSkills() {
           return (
             <div
               key={group.id}
-              className="p-5 sm:p-6 rounded-xl bg-[#0a1322] border border-white/15 hover:border-[#ff6b6b]/40 transition-all duration-300 shadow-md shadow-black/20 flex flex-col justify-between group"
+              className="p-5 sm:p-6 rounded-xl bg-[#fcfbf8] border border-[#d6cebe] hover:border-[#c92a2a]/60 transition-all duration-300 shadow-md shadow-black/5 flex flex-col justify-between group"
             >
               <div>
                 {/* Header with Ticker and Icon */}
-                <div className="flex items-center justify-between gap-2 pb-3 mb-3 border-b border-white/10">
+                <div className="flex items-center justify-between gap-2 pb-3 mb-3 border-b border-[#d6cebe]">
                   <div className="flex items-center gap-2.5">
-                    <div className="w-8 h-8 rounded bg-[#050a14] border border-white/10 flex items-center justify-center text-[#ff6b6b] group-hover:border-[#ff6b6b]/40 group-hover:text-[#ff8787] transition-colors">
+                    <div className="w-8 h-8 rounded bg-[#ede8dc] border border-[#d6cebe] flex items-center justify-center text-[#c92a2a] group-hover:border-[#c92a2a]/50 transition-colors">
                       <Icon className="w-4 h-4" />
                     </div>
                     <div>
-                      <span className="text-[10px] font-mono text-[#ff6b6b] font-bold block">
+                      <span className="text-[10px] font-mono text-[#c92a2a] font-bold block">
                         {group.ticker}
                       </span>
-                      <h3 className="font-serif text-base font-black text-[#fdfbf7] tracking-tight">
+                      <h3 className="font-serif text-base font-black text-[#121316] tracking-tight">
                         {group.title}
                       </h3>
                     </div>
                   </div>
                 </div>
 
-                <p className="text-xs text-[#a3b1cc] leading-relaxed mb-4 font-mono">
+                <p className="text-xs text-[#52525b] leading-relaxed mb-4 font-mono">
                   {group.description}
                 </p>
 
@@ -194,7 +194,7 @@ export default function ResumeSkills() {
                   {group.skills.map((skill, sIdx) => (
                     <span
                       key={sIdx}
-                      className="px-2.5 py-1 text-xs font-mono rounded bg-[#050a14] text-[#ece5d8] border border-white/10 group-hover:border-[#ff6b6b]/30 transition-colors"
+                      className="px-2.5 py-1 text-xs font-mono rounded bg-[#ede8dc] text-[#121316] border border-[#d6cebe] font-medium transition-colors"
                     >
                       {skill}
                     </span>
