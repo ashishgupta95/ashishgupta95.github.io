@@ -1,86 +1,40 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
-import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-import RecruiterRoleMatch from "@/components/RecruiterRoleMatch";
-import SystemsLab from "@/components/SystemsLab";
-import CaseStudies from "@/components/CaseStudies";
-import ExperienceTimeline from "@/components/ExperienceTimeline";
-import SkillsRadar from "@/components/SkillsRadar";
-import CommandPalette from "@/components/CommandPalette";
-import InteractiveTerminal from "@/components/InteractiveTerminal";
-import Footer from "@/components/Footer";
+import React from "react";
+import ResumeNavbar from "@/components/ResumeNavbar";
+import ResumeHeader from "@/components/ResumeHeader";
+import ResumeExperience from "@/components/ResumeExperience";
+import ResumeSkills from "@/components/ResumeSkills";
+import ResumeEducationAwards from "@/components/ResumeEducationAwards";
+import ResumeProjects from "@/components/ResumeProjects";
+import ResumeFooter from "@/components/ResumeFooter";
 
 export default function Home() {
-  const [isCommandPaletteOpen, setIsCommandPaletteOpen] = useState(false);
-  const [isTerminalOpen, setIsTerminalOpen] = useState(false);
-
-  useEffect(() => {
-    const handleGlobalKeyDown = (e: KeyboardEvent) => {
-      // Toggle Command Palette with Cmd+K or Ctrl+K
-      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
-        e.preventDefault();
-        setIsCommandPaletteOpen((prev) => !prev);
-      }
-      // Toggle Interactive Terminal with backtick ` or ~
-      if (e.key === "`" && !["INPUT", "TEXTAREA"].includes((e.target as HTMLElement)?.tagName)) {
-        e.preventDefault();
-        setIsTerminalOpen((prev) => !prev);
-      }
-    };
-
-    window.addEventListener("keydown", handleGlobalKeyDown);
-    return () => window.removeEventListener("keydown", handleGlobalKeyDown);
-  }, []);
-
   return (
-    <main className="min-h-screen bg-[#06070a] text-neutral-100 relative">
-      {/* Navbar with status pill & quick shortcuts */}
-      <Navbar
-        onOpenCommandPalette={() => setIsCommandPaletteOpen(true)}
-        onToggleTerminal={() => setIsTerminalOpen(!isTerminalOpen)}
-        isTerminalOpen={isTerminalOpen}
-      />
+    <main className="min-h-screen bg-[#06070a] text-neutral-100 antialiased selection:bg-sky-500/30 selection:text-sky-200">
+      {/* Minimal Top Navigation */}
+      <ResumeNavbar />
 
-      {/* Hero Section */}
-      <Hero
-        onOpenCaseStudies={() => {
-          const el = document.getElementById("case-studies");
-          el?.scrollIntoView({ behavior: "smooth" });
-        }}
-      />
+      {/* Main Resume Canvas */}
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 resume-paper">
+        {/* Small Intro / Header & Professional Summary */}
+        <ResumeHeader />
 
-      {/* Recruiter Quick-Match & Role Explorer */}
-      <RecruiterRoleMatch />
+        {/* Curriculum: Work Experience */}
+        <ResumeExperience />
 
-      {/* Selected Case Studies */}
-      <CaseStudies />
+        {/* Curriculum: Technical Skills & Competencies */}
+        <ResumeSkills />
 
-      {/* Unified Interactive Systems Lab (MCP Simulator + Architecture Visualizer in one tabbed component) */}
-      <SystemsLab />
+        {/* Curriculum: Education & Honors */}
+        <ResumeEducationAwards />
 
-      {/* Career Experience & Accelerated Promotions */}
-      <ExperienceTimeline />
+        {/* Selected System Architectures (Deep Dives) */}
+        <ResumeProjects />
 
-      {/* Skills & Production Engineering Radar */}
-      <SkillsRadar />
-
-      {/* Global Command Palette (Cmd+K) */}
-      <CommandPalette
-        isOpen={isCommandPaletteOpen}
-        onClose={() => setIsCommandPaletteOpen(false)}
-        onOpenTerminal={() => setIsTerminalOpen(true)}
-      />
-
-      {/* Collapsible Interactive Developer Terminal (~) */}
-      <InteractiveTerminal
-        isOpen={isTerminalOpen}
-        onClose={() => setIsTerminalOpen(false)}
-      />
-
-      {/* Footer */}
-      <Footer />
+        {/* Resume Footer */}
+        <ResumeFooter />
+      </div>
     </main>
   );
 }
