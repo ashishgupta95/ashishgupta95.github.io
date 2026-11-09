@@ -6,7 +6,6 @@ import ResumeHeader from "@/components/ResumeHeader";
 import ResumeExperience from "@/components/ResumeExperience";
 import ResumeSkills from "@/components/ResumeSkills";
 import ResumeEducationAwards from "@/components/ResumeEducationAwards";
-import ResumeProjects from "@/components/ResumeProjects";
 import ResumeFooter from "@/components/ResumeFooter";
 
 export default function Home() {
@@ -28,9 +27,6 @@ export default function Home() {
 
         {/* Curriculum: Education & Honors */}
         <ResumeEducationAwards />
-
-        {/* Selected System Architectures (Deep Dives) */}
-        <ResumeProjects />
 
         {/* Resume Footer */}
         <ResumeFooter />

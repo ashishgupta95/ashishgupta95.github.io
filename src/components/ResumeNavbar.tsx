@@ -79,12 +79,6 @@ export default function ResumeNavbar() {
           >
             Education & Awards
           </a>
-          <a
-            href="#projects"
-            className="px-2.5 py-1.5 rounded-md hover:text-white hover:bg-white/5 transition-colors"
-          >
-            Key Highlights
-          </a>
         </nav>
 
         {/* Right CTA Actions */}
@@ -172,13 +166,6 @@ export default function ResumeNavbar() {
             className="block px-3 py-2 rounded-md hover:bg-white/5 text-neutral-200"
           >
             Education & Awards
-          </a>
-          <a
-            href="#projects"
-            onClick={() => setMobileMenuOpen(false)}
-            className="block px-3 py-2 rounded-md hover:bg-white/5 text-neutral-200"
-          >
-            Key Highlights
           </a>
           <div className="pt-2 border-t border-white/10 flex gap-2">
             <button
