@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Download, Printer, Mail, ArrowUp } from "lucide-react";
+import { Download, Mail, ArrowUp } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "@/components/Icons";
 import { PERSONAL_INFO } from "@/data/portfolio-data";
 

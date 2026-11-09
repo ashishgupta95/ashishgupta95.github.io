@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { Download, Printer, Menu, X, ArrowUpRight } from "lucide-react";
+import { Download, Menu, X } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "@/components/Icons";
 import { PERSONAL_INFO } from "@/data/portfolio-data";
 
@@ -16,10 +16,6 @@ export default function ResumeNavbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  const handlePrint = () => {
-    window.print();
-  };
 
   return (
     <header
@@ -83,16 +79,6 @@ export default function ResumeNavbar() {
 
         {/* Right Actions: The authoritative single Download CV CTA */}
         <div className="flex items-center gap-2">
-          {/* Print button */}
-          <button
-            onClick={handlePrint}
-            title="Print or Save as PDF"
-            className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-neutral-300 bg-white/5 hover:bg-white/10 hover:text-white rounded-lg border border-white/10 transition-colors"
-          >
-            <Printer className="w-3.5 h-3.5 text-neutral-400" />
-            <span>Print</span>
-          </button>
-
           {/* Primary Download PDF button */}
           <a
             href="/AshishGupta_CV.pdf"
@@ -167,20 +153,10 @@ export default function ResumeNavbar() {
           >
             Education & Awards
           </a>
-          <div className="pt-2 border-t border-white/10 flex gap-2">
-            <button
-              onClick={() => {
-                setMobileMenuOpen(false);
-                handlePrint();
-              }}
-              className="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 text-xs font-medium text-neutral-300 bg-white/5 rounded-lg border border-white/10"
-            >
-              <Printer className="w-3.5 h-3.5" />
-              Print
-            </button>
+          <div className="pt-2 border-t border-white/10">
             <a
               href={`mailto:${PERSONAL_INFO.email}`}
-              className="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 text-xs font-semibold text-white bg-white/10 rounded-lg border border-white/10"
+              className="w-full inline-flex items-center justify-center gap-1.5 px-3 py-2 text-xs font-semibold text-white bg-sky-600 hover:bg-sky-500 rounded-lg border border-sky-400/30"
             >
               Email Ashish
             </a>
