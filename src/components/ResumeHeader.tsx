@@ -39,14 +39,14 @@ export default function ResumeHeader() {
         {/* Editorial Byline Strip */}
         <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs font-mono text-[#dcd4c3] tracking-wide">
           <span className="font-semibold text-[#fdfbf7]">
-            PROFILE & ARCHITECTURAL DOSSIER: <span className="text-[#ff8787]">{PERSONAL_INFO.name.toUpperCase()}</span>
+            PROFILE: <span className="text-[#ff8787]">{PERSONAL_INFO.name.toUpperCase()}</span>
           </span>
           <span className="text-white/20">•</span>
-          <span>SENIOR SOFTWARE ENGINEER</span>
+          <span className="text-[#fdfbf7] font-semibold">SENIOR SOFTWARE ENGINEER @ TRICENTIS</span>
           <span className="text-white/20">•</span>
           <span>9+ YEARS PRODUCTION PRACTICE</span>
           <span className="text-white/20">•</span>
-          <span className="text-[#ff6b6b]">EX-TRICENTIS, NAGARRO, INTIMETEC</span>
+          <span className="text-[#ff6b6b] font-semibold">VIENNA, AUSTRIA</span>
         </div>
       </div>
 
@@ -145,7 +145,7 @@ export default function ResumeHeader() {
             <div className="py-3.5 space-y-2 text-xs font-mono border-b border-white/10">
               <div className="flex justify-between items-baseline">
                 <span className="text-[#a3b1cc] uppercase">Current Role:</span>
-                <span className="text-[#fdfbf7] font-medium text-right">Senior Software Engineer</span>
+                <span className="text-[#fdfbf7] font-semibold text-right">Senior Software Engineer @ Tricentis</span>
               </div>
               <div className="flex justify-between items-baseline">
                 <span className="text-[#a3b1cc] uppercase">Primary Focus:</span>
