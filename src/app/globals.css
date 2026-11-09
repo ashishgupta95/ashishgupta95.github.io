@@ -3,6 +3,7 @@
 @theme {
   --font-sans: var(--font-geist-sans), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-serif: var(--font-newsreader), "Times New Roman", Times, Georgia, serif;
 }
 
 @layer base {
@@ -33,6 +34,36 @@ body {
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Newspaper Broadsheet Utilities */
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.oxford-rule-thick {
+  border-top: 3px double rgba(253, 251, 247, 0.35);
+  border-bottom: 1px solid rgba(253, 251, 247, 0.2);
+}
+
+.newspaper-rule {
+  border-top: 1px solid rgba(253, 251, 247, 0.15);
+  border-bottom: 1px solid rgba(253, 251, 247, 0.08);
+  height: 4px;
+}
+
+.newspaper-box {
+  background: #0a1322;
+  border: 1px solid rgba(253, 251, 247, 0.14);
+}
+
+.newspaper-box-lead {
+  background: #0c182b;
+  border: 2px solid rgba(253, 251, 247, 0.2);
+}
+
+.newspaper-col-border {
+  border-color: rgba(253, 251, 247, 0.12);
 }
 
 /* Custom background dot pattern */
