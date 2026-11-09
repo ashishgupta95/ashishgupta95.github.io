@@ -10,7 +10,7 @@ export default function ResumeExperience() {
       {/* Section Header */}
       <div className="flex items-center justify-between mb-8">
         <div>
-          <span className="text-[10px] font-mono text-sky-400 tracking-wider uppercase font-semibold">
+          <span className="text-[10px] font-mono text-lime-400 tracking-wider uppercase font-semibold">
             01 // CURRICULUM VITAE
           </span>
           <h2 className="text-xl sm:text-2xl font-bold tracking-tight text-white mt-1">
@@ -18,7 +18,7 @@ export default function ResumeExperience() {
           </h2>
         </div>
 
-        <span className="text-xs font-mono px-2.5 py-1 rounded bg-white/[0.04] text-neutral-400 border border-white/5 hidden sm:inline-block">
+        <span className="text-xs font-mono px-2.5 py-1 rounded bg-[#090b10] text-neutral-400 border border-white/5 hidden sm:inline-block">
           2017 — 2026 (9+ Yrs)
         </span>
       </div>
@@ -31,7 +31,7 @@ export default function ResumeExperience() {
           return (
             <article
               key={`${exp.company}-${index}`}
-              className="relative p-5 sm:p-6 rounded-2xl bg-white/[0.02] hover:bg-white/[0.035] border border-white/5 hover:border-white/10 transition-all duration-200 resume-badge page-break-avoid group"
+              className="relative p-5 sm:p-6 rounded-2xl bg-[#090b10]/70 hover:bg-[#0c0f16] border border-white/5 hover:border-lime-500/30 transition-all duration-200 resume-badge page-break-avoid group"
             >
               {/* Header: Role, Company, Period */}
               <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
@@ -40,12 +40,12 @@ export default function ResumeExperience() {
                     <h3 className="text-lg font-bold text-white tracking-tight">
                       {exp.role}
                     </h3>
-                    <span className="text-sky-400 font-semibold text-base">
+                    <span className="text-lime-400 font-semibold text-base">
                       @ {exp.company}
                     </span>
                     {isCurrent && (
-                      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-mono font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
-                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-mono font-medium bg-lime-500/10 text-lime-400 border border-lime-500/30">
+                        <span className="w-1.5 h-1.5 rounded-full bg-lime-400 animate-pulse"></span>
                         Current
                       </span>
                     )}
@@ -53,7 +53,7 @@ export default function ResumeExperience() {
                 </div>
 
                 <div className="flex items-center gap-3 text-xs font-mono text-neutral-400 shrink-0">
-                  <span className="flex items-center gap-1.5 text-neutral-300">
+                  <span className="flex items-center gap-1.5 text-neutral-200">
                     <Calendar className="w-3.5 h-3.5 text-neutral-500" />
                     {exp.period}
                   </span>
@@ -81,14 +81,14 @@ export default function ResumeExperience() {
 
                   return (
                     <li key={bIndex} className="flex items-start gap-2.5 leading-relaxed">
-                      <span className="text-sky-400 font-mono text-xs mt-1 shrink-0">▸</span>
+                      <span className="text-lime-400 font-mono text-xs mt-1 shrink-0">▸</span>
                       <span>
                         {hasLabel ? (
                           <>
-                            <strong className="text-neutral-100 font-semibold">
+                            <strong className="text-white font-semibold">
                               {parts[0]}:
                             </strong>
-                            <span className="text-neutral-300">
+                            <span className="text-neutral-200">
                               {parts.slice(1).join(":")}
                             </span>
                           </>
@@ -110,7 +110,7 @@ export default function ResumeExperience() {
                   {exp.skills.map((skill, sIndex) => (
                     <span
                       key={sIndex}
-                      className="px-2 py-0.5 rounded text-[11px] font-mono bg-black/40 text-neutral-300 border border-white/5 hover:border-sky-500/30 hover:text-sky-300 transition-colors"
+                      className="px-2 py-0.5 rounded text-[11px] font-mono bg-[#040507] text-neutral-200 border border-white/5 hover:border-lime-500/40 hover:text-lime-300 transition-colors"
                     >
                       {skill}
                     </span>

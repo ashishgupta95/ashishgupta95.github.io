@@ -109,7 +109,7 @@ export default function ResumeSkills() {
       {/* Section Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
         <div>
-          <span className="text-[10px] font-mono text-sky-400 tracking-wider uppercase font-semibold">
+          <span className="text-[10px] font-mono text-lime-400 tracking-wider uppercase font-semibold">
             02 // TECHNICAL PROFICIENCY
           </span>
           <h2 className="text-xl sm:text-2xl font-bold tracking-tight text-white mt-1">
@@ -118,7 +118,7 @@ export default function ResumeSkills() {
         </div>
 
         {/* Category Filters */}
-        <div className="flex flex-wrap gap-1 p-1 bg-white/[0.03] rounded-xl border border-white/5 no-print">
+        <div className="flex flex-wrap gap-1 p-1 bg-[#090b10] rounded-xl border border-white/5 no-print">
           {filterTabs.map((tab) => {
             const isActive = activeFilter === tab.id;
             return (
@@ -127,7 +127,7 @@ export default function ResumeSkills() {
                 onClick={() => setActiveFilter(tab.id)}
                 className={`px-3 py-1 rounded-lg text-xs font-medium transition-all ${
                   isActive
-                    ? "bg-sky-500 text-white shadow-sm shadow-sky-500/20 font-semibold"
+                    ? "bg-lime-400 text-black shadow-sm shadow-lime-500/25 font-bold"
                     : "text-neutral-400 hover:text-white hover:bg-white/5"
                 }`}
               >
@@ -145,10 +145,10 @@ export default function ResumeSkills() {
           return (
             <div
               key={group.id}
-              className="p-5 rounded-2xl bg-white/[0.02] hover:bg-white/[0.035] border border-white/5 hover:border-white/10 transition-all duration-200 resume-badge"
+              className="p-5 rounded-2xl bg-[#090b10]/70 hover:bg-[#0c0f16] border border-white/5 hover:border-lime-500/30 transition-all duration-200 resume-badge"
             >
               <div className="flex items-center gap-2.5 mb-3.5">
-                <div className="p-1.5 rounded-lg bg-sky-500/10 text-sky-400 border border-sky-500/20">
+                <div className="p-1.5 rounded-lg bg-lime-500/10 text-lime-400 border border-lime-500/20">
                   <Icon className="w-4 h-4" />
                 </div>
                 <h3 className="text-sm font-semibold text-white tracking-tight">
@@ -160,7 +160,7 @@ export default function ResumeSkills() {
                 {group.skills.map((skill, sIdx) => (
                   <span
                     key={sIdx}
-                    className="px-2.5 py-1 rounded-md text-xs font-mono bg-black/40 text-neutral-200 border border-white/5 hover:border-sky-500/30 hover:text-sky-300 transition-colors"
+                    className="px-2.5 py-1 rounded-md text-xs font-mono bg-[#040507] text-neutral-200 border border-white/5 hover:border-lime-500/40 hover:text-lime-300 transition-colors"
                   >
                     {skill}
                   </span>

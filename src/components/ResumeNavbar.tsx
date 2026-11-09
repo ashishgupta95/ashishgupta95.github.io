@@ -21,8 +21,8 @@ export default function ResumeNavbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 no-print ${
         scrolled
-          ? "bg-[#08090e]/90 backdrop-blur-md border-b border-white/10 shadow-lg shadow-black/40 py-2.5"
-          : "bg-[#06070a]/75 backdrop-blur-sm border-b border-white/5 py-3"
+          ? "bg-[#050608]/95 backdrop-blur-md border-b border-white/10 shadow-lg shadow-black/60 py-2.5"
+          : "bg-[#050608]/80 backdrop-blur-sm border-b border-white/5 py-3"
       }`}
     >
       <div className="max-w-5xl mx-auto px-4 sm:px-6 flex items-center justify-between">
@@ -37,10 +37,10 @@ export default function ResumeNavbar() {
           </div>
           <div>
             <div className="flex items-center gap-2">
-              <span className="font-semibold text-sm text-neutral-100 tracking-tight group-hover:text-sky-300 transition-colors">
+              <span className="font-semibold text-sm text-white tracking-tight group-hover:text-lime-300 transition-colors">
                 {PERSONAL_INFO.name}
               </span>
-              <span className="text-[10px] font-mono px-1.5 py-0.2 rounded bg-sky-950/80 text-sky-400 border border-sky-800/40">
+              <span className="text-[10px] font-mono px-1.5 py-0.2 rounded bg-lime-950/70 text-lime-400 border border-lime-800/50 font-semibold">
                 Senior SE
               </span>
             </div>
@@ -78,15 +78,15 @@ export default function ResumeNavbar() {
           </a>
         </nav>
 
-        {/* Right Actions: The authoritative single Download CV CTA */}
+        {/* Right Actions: The authoritative single Download CV CTA in Lime Green */}
         <div className="flex items-center gap-2">
           {/* Primary Download PDF button */}
           <a
             href="/AshishGupta_CV.pdf"
             download="AshishGupta_CV.pdf"
-            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-semibold text-white bg-gradient-to-r from-sky-500 to-indigo-600 hover:from-sky-400 hover:to-indigo-500 rounded-lg shadow-md shadow-sky-500/20 border border-sky-400/30 transition-all duration-200 hover:scale-[1.03]"
+            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-bold text-black bg-gradient-to-r from-lime-400 to-emerald-500 hover:from-lime-300 hover:to-emerald-400 rounded-lg shadow-md shadow-lime-500/25 border border-lime-300/50 transition-all duration-200 hover:scale-[1.03]"
           >
-            <Download className="w-3.5 h-3.5" />
+            <Download className="w-3.5 h-3.5 text-black" />
             <span>Download CV (PDF)</span>
           </a>
 
@@ -125,7 +125,7 @@ export default function ResumeNavbar() {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-[#0a0c13] border-b border-white/10 px-4 py-3 space-y-2 text-sm font-medium">
+        <div className="md:hidden bg-[#07090e] border-b border-white/10 px-4 py-3 space-y-2 text-sm font-medium">
           <a
             href="#intro"
             onClick={() => setMobileMenuOpen(false)}
@@ -157,7 +157,7 @@ export default function ResumeNavbar() {
           <div className="pt-2 border-t border-white/10">
             <a
               href={`mailto:${PERSONAL_INFO.email}`}
-              className="w-full inline-flex items-center justify-center gap-1.5 px-3 py-2 text-xs font-semibold text-white bg-sky-600 hover:bg-sky-500 rounded-lg border border-sky-400/30"
+              className="w-full inline-flex items-center justify-center gap-1.5 px-3 py-2 text-xs font-bold text-black bg-lime-400 hover:bg-lime-300 rounded-lg border border-lime-300/40"
             >
               Email Ashish
             </a>
