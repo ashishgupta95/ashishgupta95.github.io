@@ -93,8 +93,8 @@ export default function ResumeHeader() {
                 <div className="text-[10px] font-mono uppercase tracking-wider text-[#52525b] mt-0.5">@ Tricentis</div>
               </div>
               <div className="p-2.5 rounded bg-[#ede8dc] border border-[#d6cebe]">
-                <div className="font-serif text-xl font-black text-[#b91c1c]">EU / AT</div>
-                <div className="text-[10px] font-mono uppercase tracking-wider text-[#52525b] mt-0.5">Full Work Rights</div>
+                <div className="font-serif text-xl font-black text-[#b91c1c]">RWR+</div>
+                <div className="text-[10px] font-mono uppercase tracking-wider text-[#52525b] mt-0.5">Rot-Weiß-Rot Card</div>
               </div>
             </div>
           </div>
@@ -155,7 +155,7 @@ export default function ResumeHeader() {
               </div>
               <div className="flex justify-between items-baseline">
                 <span className="text-[#52525b] uppercase">Working Rights:</span>
-                <span className="text-[#121316] font-bold text-right">Full Work Rights (Austria / EU)</span>
+                <span className="text-[#121316] font-bold text-right">RWR+ Card (Unrestricted Austria)</span>
               </div>
             </div>
 
