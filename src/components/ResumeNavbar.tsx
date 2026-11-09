@@ -31,8 +31,9 @@ export default function ResumeNavbar() {
           href="#"
           className="flex items-center gap-2.5 text-left group"
         >
-          <div className="w-8 h-8 rounded-lg bg-sky-500/10 border border-sky-500/30 flex items-center justify-center text-sky-400 font-mono font-bold text-xs group-hover:border-sky-400 group-hover:bg-sky-500/20 transition-all">
-            AG
+          <div className="w-8 h-8 rounded-lg bg-[#07090e] border border-lime-500/40 flex items-center justify-center font-mono font-bold text-xs group-hover:border-lime-400 group-hover:shadow-[0_0_12px_rgba(34,197,94,0.35)] transition-all">
+            <span className="text-white">A</span>
+            <span className="text-lime-400">G</span>
           </div>
           <div>
             <div className="flex items-center gap-2">
