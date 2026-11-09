@@ -17,8 +17,8 @@ export default function Home() {
       {/* Minimal Top Navigation */}
       <ResumeNavbar />
 
-      {/* Main Magazine Dossier Canvas */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 resume-paper relative z-10">
+      {/* Main Resume Canvas */}
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 resume-paper relative z-10">
         {/* Small Intro / Header & Professional Summary */}
         <ResumeHeader />
 
