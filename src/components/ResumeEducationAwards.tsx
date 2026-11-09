@@ -11,32 +11,32 @@ export default function ResumeEducationAwards() {
         {/* Education Column */}
         <div>
           <div className="mb-6">
-            <span className="text-[10px] font-mono text-lime-400 tracking-wider uppercase font-semibold">
+            <span className="text-[10px] font-mono text-[#ff6b6b] tracking-wider uppercase font-semibold">
               03 // ACADEMIC FOUNDATION
             </span>
             <div className="flex items-center gap-2 mt-1">
-              <GraduationCap className="w-5 h-5 text-lime-400" />
-              <h2 className="text-xl font-bold tracking-tight text-white">
+              <GraduationCap className="w-5 h-5 text-[#ff6b6b]" />
+              <h2 className="text-xl font-bold tracking-tight text-[#fdfbf7]">
                 Education
               </h2>
             </div>
           </div>
 
-          <div className="p-5 rounded-2xl bg-[#090b10]/70 hover:bg-[#0c0f16] border border-white/5 hover:border-lime-500/30 transition-all duration-200 resume-badge">
-            <h3 className="text-base font-bold text-white tracking-tight">
+          <div className="p-5 rounded-2xl bg-[#0e1a2f]/80 hover:bg-[#12213d] border border-white/5 hover:border-[#ff6b6b]/30 transition-all duration-200 resume-badge">
+            <h3 className="text-base font-bold text-[#fdfbf7] tracking-tight">
               {EDUCATION.degree}
             </h3>
-            <p className="text-sm font-medium text-lime-400 mt-1">
+            <p className="text-sm font-medium text-[#ff8787] mt-1">
               {EDUCATION.institution}
             </p>
-            <div className="flex items-center gap-3 text-xs font-mono text-neutral-400 mt-3 pt-2 border-t border-white/5">
-              <span className="flex items-center gap-1.5 text-neutral-200">
-                <Calendar className="w-3.5 h-3.5 text-neutral-500" />
+            <div className="flex items-center gap-3 text-xs font-mono text-[#a3b1cc] mt-3 pt-2 border-t border-white/5">
+              <span className="flex items-center gap-1.5 text-[#fdfbf7]">
+                <Calendar className="w-3.5 h-3.5 text-[#a3b1cc]" />
                 {EDUCATION.period}
               </span>
               <span>•</span>
-              <span className="flex items-center gap-1.5 text-neutral-400">
-                <MapPin className="w-3.5 h-3.5 text-neutral-500" />
+              <span className="flex items-center gap-1.5 text-[#a3b1cc]">
+                <MapPin className="w-3.5 h-3.5 text-[#a3b1cc]" />
                 {EDUCATION.location}
               </span>
             </div>
@@ -46,12 +46,12 @@ export default function ResumeEducationAwards() {
         {/* Awards & Accelerated Promotions Column */}
         <div>
           <div className="mb-6">
-            <span className="text-[10px] font-mono text-lime-400 tracking-wider uppercase font-semibold">
+            <span className="text-[10px] font-mono text-[#ff6b6b] tracking-wider uppercase font-semibold">
               04 // FAST-TRACK PROMOTIONS
             </span>
             <div className="flex items-center gap-2 mt-1">
-              <Award className="w-5 h-5 text-lime-400" />
-              <h2 className="text-xl font-bold tracking-tight text-white">
+              <Award className="w-5 h-5 text-[#ff6b6b]" />
+              <h2 className="text-xl font-bold tracking-tight text-[#fdfbf7]">
                 Honors & Recognition
               </h2>
             </div>
@@ -61,20 +61,20 @@ export default function ResumeEducationAwards() {
             {AWARDS.map((award, index) => (
               <div
                 key={index}
-                className="p-5 rounded-2xl bg-[#090b10]/70 hover:bg-[#0c0f16] border border-white/5 hover:border-lime-500/30 transition-all duration-200 resume-badge"
+                className="p-5 rounded-2xl bg-[#0e1a2f]/80 hover:bg-[#12213d] border border-white/5 hover:border-[#ff6b6b]/30 transition-all duration-200 resume-badge"
               >
                 <div className="flex items-baseline justify-between gap-2">
-                  <h3 className="text-sm font-bold text-white">
+                  <h3 className="text-sm font-bold text-[#fdfbf7]">
                     {award.title}
                   </h3>
-                  <span className="text-[11px] font-mono px-2 py-0.5 rounded bg-lime-500/10 text-lime-400 border border-lime-500/30 shrink-0 font-semibold">
+                  <span className="text-[11px] font-mono px-2 py-0.5 rounded bg-[#ff6b6b]/10 text-[#ff6b6b] border border-[#ff6b6b]/30 shrink-0 font-semibold">
                     {award.date}
                   </span>
                 </div>
-                <p className="text-xs font-medium text-neutral-400 mt-1">
+                <p className="text-xs font-medium text-[#a3b1cc] mt-1">
                   {award.organization}
                 </p>
-                <p className="text-xs text-neutral-300 mt-2 leading-relaxed">
+                <p className="text-xs text-[#e8decb] mt-2 leading-relaxed">
                   {award.description}
                 </p>
               </div>

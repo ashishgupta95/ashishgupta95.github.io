@@ -11,14 +11,14 @@ export default function ResumeFooter() {
   };
 
   return (
-    <footer className="py-10 text-neutral-400 text-xs no-print">
+    <footer className="py-10 text-[#a3b1cc] text-xs no-print">
       <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
         {/* Left Info */}
         <div className="text-center sm:text-left">
-          <div className="font-semibold text-neutral-200 text-sm">
+          <div className="font-semibold text-[#fdfbf7] text-sm">
             {PERSONAL_INFO.name} — Senior Software Engineer
           </div>
-          <div className="text-neutral-500 font-mono text-xs mt-1">
+          <div className="text-[#a3b1cc] font-mono text-xs mt-1">
             Vienna, Austria • Ready for production engineering impact
           </div>
         </div>
@@ -28,9 +28,9 @@ export default function ResumeFooter() {
           <a
             href="/AshishGupta_CV.pdf"
             download="AshishGupta_CV.pdf"
-            className="inline-flex items-center gap-1.5 text-neutral-400 hover:text-lime-400 transition-colors"
+            className="inline-flex items-center gap-1.5 text-[#a3b1cc] hover:text-[#ff8787] transition-colors"
           >
-            <Download className="w-3.5 h-3.5 text-lime-400" />
+            <Download className="w-3.5 h-3.5 text-[#ff6b6b]" />
             <span>AshishGupta_CV.pdf (286 KB)</span>
           </a>
         </div>
@@ -40,7 +40,7 @@ export default function ResumeFooter() {
           <div className="flex items-center gap-2">
             <a
               href={`mailto:${PERSONAL_INFO.email}`}
-              className="p-2 rounded-lg bg-white/5 hover:bg-white/10 hover:text-lime-400 text-neutral-400 border border-white/5 hover:border-lime-500/30 transition-colors"
+              className="p-2 rounded-lg bg-white/5 hover:bg-white/10 hover:text-[#ff8787] text-[#a3b1cc] border border-white/5 hover:border-[#ff6b6b]/30 transition-colors"
               title="Email Ashish"
             >
               <Mail className="w-4 h-4" />
@@ -49,7 +49,7 @@ export default function ResumeFooter() {
               href={PERSONAL_INFO.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-lg bg-white/5 hover:bg-white/10 hover:text-lime-400 text-neutral-400 border border-white/5 hover:border-lime-500/30 transition-colors"
+              className="p-2 rounded-lg bg-white/5 hover:bg-white/10 hover:text-[#ff8787] text-[#a3b1cc] border border-white/5 hover:border-[#ff6b6b]/30 transition-colors"
               title="LinkedIn Profile"
             >
               <LinkedinIcon className="w-4 h-4" />
@@ -58,7 +58,7 @@ export default function ResumeFooter() {
               href={PERSONAL_INFO.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-lg bg-white/5 hover:bg-white/10 hover:text-lime-400 text-neutral-400 border border-white/5 hover:border-lime-500/30 transition-colors"
+              className="p-2 rounded-lg bg-white/5 hover:bg-white/10 hover:text-[#ff8787] text-[#a3b1cc] border border-white/5 hover:border-[#ff6b6b]/30 transition-colors"
               title="GitHub Profile"
             >
               <GithubIcon className="w-4 h-4" />
@@ -67,7 +67,7 @@ export default function ResumeFooter() {
 
           <button
             onClick={scrollToTop}
-            className="inline-flex items-center gap-1 p-2 rounded-lg bg-white/5 hover:bg-white/10 text-neutral-400 hover:text-lime-400 border border-white/5 hover:border-lime-500/30 transition-colors"
+            className="inline-flex items-center gap-1 p-2 rounded-lg bg-white/5 hover:bg-white/10 text-[#a3b1cc] hover:text-[#ff8787] border border-white/5 hover:border-[#ff6b6b]/30 transition-colors"
             title="Back to Top"
             aria-label="Back to Top"
           >

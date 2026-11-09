@@ -10,15 +10,15 @@ export default function ResumeExperience() {
       {/* Section Header */}
       <div className="flex items-center justify-between mb-8">
         <div>
-          <span className="text-[10px] font-mono text-lime-400 tracking-wider uppercase font-semibold">
+          <span className="text-[10px] font-mono text-[#ff6b6b] tracking-wider uppercase font-semibold">
             01 // CURRICULUM VITAE
           </span>
-          <h2 className="text-xl sm:text-2xl font-bold tracking-tight text-white mt-1">
+          <h2 className="text-xl sm:text-2xl font-bold tracking-tight text-[#fdfbf7] mt-1">
             Work Experience
           </h2>
         </div>
 
-        <span className="text-xs font-mono px-2.5 py-1 rounded bg-[#090b10] text-neutral-400 border border-white/5 hidden sm:inline-block">
+        <span className="text-xs font-mono px-2.5 py-1 rounded bg-[#0e1a2f] text-[#a3b1cc] border border-white/5 hidden sm:inline-block">
           2017 — 2026 (9+ Yrs)
         </span>
       </div>
@@ -31,35 +31,35 @@ export default function ResumeExperience() {
           return (
             <article
               key={`${exp.company}-${index}`}
-              className="relative p-5 sm:p-6 rounded-2xl bg-[#090b10]/70 hover:bg-[#0c0f16] border border-white/5 hover:border-lime-500/30 transition-all duration-200 resume-badge page-break-avoid group"
+              className="relative p-5 sm:p-6 rounded-2xl bg-[#0e1a2f]/80 hover:bg-[#12213d] border border-white/5 hover:border-[#ff6b6b]/30 transition-all duration-200 resume-badge page-break-avoid group"
             >
               {/* Header: Role, Company, Period */}
               <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
                 <div>
                   <div className="flex flex-wrap items-center gap-2">
-                    <h3 className="text-lg font-bold text-white tracking-tight">
+                    <h3 className="text-lg font-bold text-[#fdfbf7] tracking-tight">
                       {exp.role}
                     </h3>
-                    <span className="text-lime-400 font-semibold text-base">
+                    <span className="text-[#ff6b6b] font-semibold text-base">
                       @ {exp.company}
                     </span>
                     {isCurrent && (
-                      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-mono font-medium bg-lime-500/10 text-lime-400 border border-lime-500/30">
-                        <span className="w-1.5 h-1.5 rounded-full bg-lime-400 animate-pulse"></span>
+                      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-mono font-medium bg-[#ff6b6b]/10 text-[#ff6b6b] border border-[#ff6b6b]/30">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#ff6b6b] animate-pulse"></span>
                         Current
                       </span>
                     )}
                   </div>
                 </div>
 
-                <div className="flex items-center gap-3 text-xs font-mono text-neutral-400 shrink-0">
-                  <span className="flex items-center gap-1.5 text-neutral-200">
-                    <Calendar className="w-3.5 h-3.5 text-neutral-500" />
+                <div className="flex items-center gap-3 text-xs font-mono text-[#a3b1cc] shrink-0">
+                  <span className="flex items-center gap-1.5 text-[#fdfbf7]">
+                    <Calendar className="w-3.5 h-3.5 text-[#a3b1cc]" />
                     {exp.period}
                   </span>
                   <span>•</span>
-                  <span className="flex items-center gap-1.5 text-neutral-400">
-                    <MapPin className="w-3.5 h-3.5 text-neutral-500" />
+                  <span className="flex items-center gap-1.5 text-[#a3b1cc]">
+                    <MapPin className="w-3.5 h-3.5 text-[#a3b1cc]" />
                     {exp.location}
                   </span>
                 </div>
@@ -74,21 +74,21 @@ export default function ResumeExperience() {
               )}
 
               {/* Bullet Points */}
-              <ul className="mt-4 space-y-2 text-sm text-neutral-300">
+              <ul className="mt-4 space-y-2 text-sm text-[#e8decb]">
                 {exp.description.map((bullet, bIndex) => {
                   const parts = bullet.split(":");
                   const hasLabel = parts.length > 1 && parts[0].length < 65;
 
                   return (
                     <li key={bIndex} className="flex items-start gap-2.5 leading-relaxed">
-                      <span className="text-lime-400 font-mono text-xs mt-1 shrink-0">▸</span>
+                      <span className="text-[#ff6b6b] font-mono text-xs mt-1 shrink-0">▸</span>
                       <span>
                         {hasLabel ? (
                           <>
-                            <strong className="text-white font-semibold">
+                            <strong className="text-[#fdfbf7] font-semibold">
                               {parts[0]}:
                             </strong>
-                            <span className="text-neutral-200">
+                            <span className="text-[#e8decb]">
                               {parts.slice(1).join(":")}
                             </span>
                           </>
@@ -104,13 +104,13 @@ export default function ResumeExperience() {
               {/* Tech Tags */}
               {exp.skills && exp.skills.length > 0 && (
                 <div className="flex flex-wrap items-center gap-1.5 mt-4 pt-3 border-t border-white/5">
-                  <span className="text-[11px] font-mono text-neutral-400 mr-1">
+                  <span className="text-[11px] font-mono text-[#a3b1cc] mr-1">
                     Stack:
                   </span>
                   {exp.skills.map((skill, sIndex) => (
                     <span
                       key={sIndex}
-                      className="px-2 py-0.5 rounded text-[11px] font-mono bg-[#040507] text-neutral-200 border border-white/5 hover:border-lime-500/40 hover:text-lime-300 transition-colors"
+                      className="px-2 py-0.5 rounded text-[11px] font-mono bg-[#09111e] text-[#fdfbf7] border border-white/5 hover:border-[#ff6b6b]/40 hover:text-[#ff8787] transition-colors"
                     >
                       {skill}
                     </span>

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Code2, Cpu, Database, Cloud, Terminal, Sparkles, Check, Filter } from "lucide-react";
+import { Code2, Cpu, Database, Cloud, Terminal, Sparkles } from "lucide-react";
 
 export default function ResumeSkills() {
   const [activeFilter, setActiveFilter] = useState<string>("All");
@@ -109,16 +109,16 @@ export default function ResumeSkills() {
       {/* Section Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
         <div>
-          <span className="text-[10px] font-mono text-lime-400 tracking-wider uppercase font-semibold">
+          <span className="text-[10px] font-mono text-[#ff6b6b] tracking-wider uppercase font-semibold">
             02 // TECHNICAL PROFICIENCY
           </span>
-          <h2 className="text-xl sm:text-2xl font-bold tracking-tight text-white mt-1">
+          <h2 className="text-xl sm:text-2xl font-bold tracking-tight text-[#fdfbf7] mt-1">
             Skills & Technologies
           </h2>
         </div>
 
         {/* Category Filters */}
-        <div className="flex flex-wrap gap-1 p-1 bg-[#090b10] rounded-xl border border-white/5 no-print">
+        <div className="flex flex-wrap gap-1 p-1 bg-[#0e1a2f] rounded-xl border border-white/5 no-print">
           {filterTabs.map((tab) => {
             const isActive = activeFilter === tab.id;
             return (
@@ -127,8 +127,8 @@ export default function ResumeSkills() {
                 onClick={() => setActiveFilter(tab.id)}
                 className={`px-3 py-1 rounded-lg text-xs font-medium transition-all ${
                   isActive
-                    ? "bg-lime-400 text-black shadow-sm shadow-lime-500/25 font-bold"
-                    : "text-neutral-400 hover:text-white hover:bg-white/5"
+                    ? "bg-[#ff6b6b] text-white shadow-sm shadow-[#ff6b6b]/25 font-bold"
+                    : "text-[#c4beaf] hover:text-[#fdfbf7] hover:bg-white/5"
                 }`}
               >
                 {tab.label}
@@ -145,13 +145,13 @@ export default function ResumeSkills() {
           return (
             <div
               key={group.id}
-              className="p-5 rounded-2xl bg-[#090b10]/70 hover:bg-[#0c0f16] border border-white/5 hover:border-lime-500/30 transition-all duration-200 resume-badge"
+              className="p-5 rounded-2xl bg-[#0e1a2f]/80 hover:bg-[#12213d] border border-white/5 hover:border-[#ff6b6b]/30 transition-all duration-200 resume-badge"
             >
               <div className="flex items-center gap-2.5 mb-3.5">
-                <div className="p-1.5 rounded-lg bg-lime-500/10 text-lime-400 border border-lime-500/20">
+                <div className="p-1.5 rounded-lg bg-[#ff6b6b]/10 text-[#ff6b6b] border border-[#ff6b6b]/20">
                   <Icon className="w-4 h-4" />
                 </div>
-                <h3 className="text-sm font-semibold text-white tracking-tight">
+                <h3 className="text-sm font-semibold text-[#fdfbf7] tracking-tight">
                   {group.title}
                 </h3>
               </div>
@@ -160,7 +160,7 @@ export default function ResumeSkills() {
                 {group.skills.map((skill, sIdx) => (
                   <span
                     key={sIdx}
-                    className="px-2.5 py-1 rounded-md text-xs font-mono bg-[#040507] text-neutral-200 border border-white/5 hover:border-lime-500/40 hover:text-lime-300 transition-colors"
+                    className="px-2.5 py-1 rounded-md text-xs font-mono bg-[#09111e] text-[#fdfbf7] border border-white/5 hover:border-[#ff6b6b]/40 hover:text-[#ff8787] transition-colors"
                   >
                     {skill}
                   </span>
