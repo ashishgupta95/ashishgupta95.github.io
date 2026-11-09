@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { Mail, Phone, MapPin, Copy, Check, Download, Printer, ExternalLink, Sparkles, Award } from "lucide-react";
+import { Mail, Phone, MapPin, Copy, Check, Printer, ExternalLink, Sparkles } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "@/components/Icons";
 import { PERSONAL_INFO } from "@/data/portfolio-data";
 
@@ -22,20 +22,20 @@ export default function ResumeHeader() {
         <div className="flex items-start sm:items-center gap-5">
           {/* Avatar with subtle glow */}
           <div className="relative shrink-0">
-            <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden border-2 border-sky-500/40 shadow-lg shadow-sky-950/40 bg-neutral-900">
+            <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden border-2 border-sky-500/40 shadow-lg shadow-sky-950/40 bg-neutral-900 group">
               <Image
                 src="/profile-pic.png"
                 alt="Ashish Gupta"
                 width={96}
                 height={96}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                 priority
               />
             </div>
             {/* Live presence indicator */}
             <span
               className="absolute -bottom-1 -right-1 flex h-4 w-4 no-print"
-              title="Based in Vienna, Austria"
+              title="Based in Vienna, Austria • Active"
             >
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-4 w-4 bg-emerald-500 border-2 border-[#06070a]"></span>
@@ -48,8 +48,8 @@ export default function ResumeHeader() {
               <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-white">
                 {PERSONAL_INFO.name}
               </h1>
-              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
                 Senior SE
               </span>
             </div>
@@ -58,28 +58,27 @@ export default function ResumeHeader() {
               Senior Software Engineer <span className="text-neutral-400 font-normal">| 9+ Years Production Experience</span>
             </p>
 
-            <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mt-2 text-xs text-neutral-400">
-              <span className="flex items-center gap-1.5">
-                <MapPin className="w-3.5 h-3.5 text-neutral-400" />
+            <div className="flex flex-wrap items-center gap-x-3 gap-y-1 mt-2 text-xs text-neutral-400">
+              <span className="flex items-center gap-1.5 text-neutral-300">
+                <MapPin className="w-3.5 h-3.5 text-sky-400" />
                 {PERSONAL_INFO.location}
               </span>
               <span>•</span>
-              <span className="text-neutral-300">Open to Remote / Hybrid roles</span>
+              <span className="text-neutral-300">Open to Remote & Hybrid Roles</span>
               <span>•</span>
               <span className="text-neutral-300">EU Working Rights</span>
             </div>
           </div>
         </div>
 
-        {/* Quick CTA Actions */}
+        {/* Executive Actions (Single CTA context - no duplicate download button) */}
         <div className="flex sm:flex-row md:flex-col gap-2 shrink-0 no-print">
           <a
-            href="/AshishGupta_CV.pdf"
-            download="AshishGupta_CV.pdf"
-            className="flex-1 md:flex-initial inline-flex items-center justify-center gap-2 px-4 py-2 text-xs font-semibold text-white bg-sky-600 hover:bg-sky-500 rounded-lg shadow-sm shadow-sky-900/40 border border-sky-400/30 transition-colors"
+            href={`mailto:${PERSONAL_INFO.email}`}
+            className="flex-1 md:flex-initial inline-flex items-center justify-center gap-2 px-4 py-2 text-xs font-semibold text-white bg-sky-600 hover:bg-sky-500 rounded-lg shadow-sm shadow-sky-950/40 border border-sky-400/30 transition-all duration-200 hover:shadow-sky-500/20 hover:scale-[1.02]"
           >
-            <Download className="w-3.5 h-3.5" />
-            <span>Download CV (PDF)</span>
+            <Mail className="w-3.5 h-3.5" />
+            <span>Get In Touch</span>
           </a>
           <button
             onClick={() => window.print()}
@@ -92,9 +91,9 @@ export default function ResumeHeader() {
       </div>
 
       {/* Contact Pills Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2.5 py-4 my-2 bg-neutral-900/40 rounded-xl border border-white/5 p-3 text-xs">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2.5 py-3 my-2 bg-neutral-900/40 rounded-xl border border-white/5 p-3 text-xs">
         {/* Email */}
-        <div className="flex items-center justify-between gap-2 px-2.5 py-1.5 rounded-lg bg-black/40 border border-white/5">
+        <div className="flex items-center justify-between gap-2 px-3 py-2 rounded-lg bg-black/40 border border-white/5 hover:border-white/10 transition-colors">
           <a
             href={`mailto:${PERSONAL_INFO.email}`}
             className="flex items-center gap-2 text-neutral-200 hover:text-sky-400 truncate"
@@ -105,8 +104,8 @@ export default function ResumeHeader() {
           </a>
           <button
             onClick={copyEmail}
-            className="p-1 text-neutral-400 hover:text-white no-print"
-            title="Copy email"
+            className="p-1 text-neutral-400 hover:text-white no-print transition-colors"
+            title={copied ? "Copied!" : "Copy email address"}
             aria-label="Copy email address"
           >
             {copied ? (
@@ -118,7 +117,7 @@ export default function ResumeHeader() {
         </div>
 
         {/* Phone */}
-        <div className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg bg-black/40 border border-white/5">
+        <div className="flex items-center gap-2 px-3 py-2 rounded-lg bg-black/40 border border-white/5 hover:border-white/10 transition-colors">
           <Phone className="w-3.5 h-3.5 text-sky-400 shrink-0" />
           <a
             href={`tel:${PERSONAL_INFO.phone}`}
@@ -129,7 +128,7 @@ export default function ResumeHeader() {
         </div>
 
         {/* LinkedIn */}
-        <div className="flex items-center justify-between gap-2 px-2.5 py-1.5 rounded-lg bg-black/40 border border-white/5">
+        <div className="flex items-center justify-between gap-2 px-3 py-2 rounded-lg bg-black/40 border border-white/5 hover:border-white/10 transition-colors">
           <a
             href={PERSONAL_INFO.linkedin}
             target="_blank"
@@ -143,7 +142,7 @@ export default function ResumeHeader() {
         </div>
 
         {/* GitHub */}
-        <div className="flex items-center justify-between gap-2 px-2.5 py-1.5 rounded-lg bg-black/40 border border-white/5">
+        <div className="flex items-center justify-between gap-2 px-3 py-2 rounded-lg bg-black/40 border border-white/5 hover:border-white/10 transition-colors">
           <a
             href={PERSONAL_INFO.github}
             target="_blank"
@@ -158,12 +157,14 @@ export default function ResumeHeader() {
       </div>
 
       {/* Small Intro / Professional Summary */}
-      <div className="mt-4 pt-2">
-        <h2 className="text-xs font-mono font-semibold uppercase tracking-wider text-neutral-400 mb-2">
-          Professional Summary
-        </h2>
-        <p className="text-sm sm:text-base text-neutral-200 leading-relaxed">
-          Results-driven <strong className="text-white font-semibold">Senior Software Engineer</strong> with <strong className="text-white font-semibold">9+ years of experience</strong> architecting and delivering scalable, high-performance web applications and microservices across BFSI, Supply Chain, and Energy sectors. Expert in full-stack development using <span className="text-sky-300">C#, TypeScript, JavaScript, and SQL</span>, with production exposure to <span className="text-sky-300">Rust and Java</span>. Proven track record applying microservices patterns, distributed systems principles, and robust test automation to ship resilient, low-latency platforms for mission-critical operations. Experienced in accelerating product velocity by engineering enterprise AI integrations, including <span className="text-indigo-300 font-medium">Model Context Protocols (MCPs)</span> and LLM workflows.
+      <div className="mt-5 pt-2">
+        <div className="flex items-center gap-2 mb-2">
+          <span className="text-[10px] font-mono text-sky-400 tracking-wider uppercase font-semibold">
+            00 // EXECUTIVE SUMMARY
+          </span>
+        </div>
+        <p className="text-sm sm:text-base text-neutral-200 leading-relaxed font-normal">
+          Results-driven <strong className="text-white font-semibold">Senior Software Engineer</strong> with <strong className="text-white font-semibold">9+ years of experience</strong> architecting and delivering scalable, high-performance web applications and microservices across BFSI, Supply Chain, and Energy sectors. Expert in full-stack development using <span className="text-sky-300 font-medium">C#, TypeScript, JavaScript, and SQL</span>, with production exposure to <span className="text-sky-300 font-medium">Rust and Java</span>. Proven track record applying microservices patterns, distributed systems principles, and robust test automation to ship resilient, low-latency platforms for mission-critical operations. Experienced in accelerating product velocity by engineering enterprise AI integrations, including <span className="text-indigo-300 font-medium">Model Context Protocols (MCPs)</span> and LLM workflows.
         </p>
       </div>
     </section>
