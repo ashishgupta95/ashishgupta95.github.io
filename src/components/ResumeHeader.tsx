@@ -166,26 +166,6 @@ export default function ResumeHeader() {
           Results-driven <strong className="text-white font-semibold">Senior Software Engineer</strong> with <strong className="text-white font-semibold">9+ years of experience</strong> architecting and delivering scalable, high-performance web applications and microservices across BFSI, Supply Chain, and Energy sectors. Expert in full-stack development using <span className="text-sky-300">C#, TypeScript, JavaScript, and SQL</span>, with production exposure to <span className="text-sky-300">Rust and Java</span>. Proven track record applying microservices patterns, distributed systems principles, and robust test automation to ship resilient, low-latency platforms for mission-critical operations. Experienced in accelerating product velocity by engineering enterprise AI integrations, including <span className="text-indigo-300 font-medium">Model Context Protocols (MCPs)</span> and LLM workflows.
         </p>
       </div>
-
-      {/* Quick Resume Highlights */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-6 pt-2">
-        <div className="p-3 rounded-lg bg-white/[0.03] border border-white/5 resume-badge">
-          <div className="text-lg font-bold text-white font-mono">9+ Years</div>
-          <div className="text-xs text-neutral-400 mt-0.5">Production Experience</div>
-        </div>
-        <div className="p-3 rounded-lg bg-white/[0.03] border border-white/5 resume-badge">
-          <div className="text-lg font-bold text-sky-400 font-mono">100+ GB</div>
-          <div className="text-xs text-neutral-400 mt-0.5">Data Engine (Rust & .NET 8)</div>
-        </div>
-        <div className="p-3 rounded-lg bg-white/[0.03] border border-white/5 resume-badge">
-          <div className="text-lg font-bold text-indigo-400 font-mono">MCPs & AI</div>
-          <div className="text-xs text-neutral-400 mt-0.5">Enterprise Agent Tooling</div>
-        </div>
-        <div className="p-3 rounded-lg bg-white/[0.03] border border-white/5 resume-badge">
-          <div className="text-lg font-bold text-emerald-400 font-mono">19 Months</div>
-          <div className="text-xs text-neutral-400 mt-0.5">Senior SE Promotion Velocity</div>
-        </div>
-      </div>
     </section>
   );
 }
