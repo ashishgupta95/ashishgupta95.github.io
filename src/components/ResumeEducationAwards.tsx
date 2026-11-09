@@ -6,7 +6,7 @@ import { EDUCATION, AWARDS } from "@/data/portfolio-data";
 
 export default function ResumeEducationAwards() {
   return (
-    <section id="education" className="py-12 border-b-2 border-[#121316] resume-border page-break-avoid">
+    <section id="education" className="py-12 resume-border page-break-avoid">
       {/* Newspaper Page 4 Header */}
       <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8 pb-3 border-b border-[#d6cebe]">
         <div>

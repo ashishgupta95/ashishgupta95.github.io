@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Download, Mail, ArrowUp } from "lucide-react";
+import { Mail, ArrowUp } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "@/components/Icons";
 import { PERSONAL_INFO } from "@/data/portfolio-data";
 
@@ -25,18 +25,6 @@ export default function ResumeFooter() {
             <div className="text-[10px] text-[#71717a] mt-0.5">
               Typeset in Newsreader, Geist Sans & Geist Mono • All metrics verified
             </div>
-          </div>
-
-          {/* Center: PDF Download reference */}
-          <div className="flex items-center gap-3 text-xs">
-            <a
-              href="/AshishGupta_CV.pdf"
-              download="AshishGupta_CV.pdf"
-              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#ede8dc] border border-[#d6cebe] hover:border-[#c92a2a] text-[#121316] hover:text-[#c92a2a] transition-colors font-medium"
-            >
-              <Download className="w-3.5 h-3.5 text-[#c92a2a]" />
-              <span>AshishGupta_CV.pdf (286 KB)</span>
-            </a>
           </div>
 
           {/* Right: Social & Back to Top */}
